@@ -11,6 +11,11 @@ int main(void){
     printf("Zadaj cislo  ");
     scanf("%d" , &vyska);
 
+    if (scanf("%d", &vyska) != 1) {
+        printf("Musis zadat platne cele cislo\n");
+        return 1;
+    }
+
     if (vyska <= 0){
         printf("Zadane cislo musi byt kladne");
         return 1;
@@ -20,6 +25,7 @@ int main(void){
         printf("Zadane cislo musi byt mensie ako 20");
         return 1;
     }
+    
 
     for (int i = 1; vyska >= i; i++)
     {
